@@ -1,12 +1,22 @@
-import { Button } from "@mui/material";
-import {Add} from '@mui/icons-material';
+import React from "react";
+import Sidebar from './components/Sidebar';
+import Rightbar from './components/Rightbar';
+import Feed from './components/Feed';
+import Navbar from './components/Navbar'
+import { Box, Stack } from "@mui/material";
+
 function App() {
-  return ( <div className="App">
-     Hello MUI
-     <br/>
-      <Button  size='small' startIcon={<Add />} color="secondary" variant="contained">hello</Button>
-    </div>
-  );
+
+  return ( 
+  <Box>
+< Navbar /> 
+  <Stack direction='row' spacing={2} justifyContent='space-between'>
+     <Sidebar />
+     <Feed />
+     <Rightbar />
+  </Stack>
+    </Box>
+    ); 
 }
 
 export default App;
