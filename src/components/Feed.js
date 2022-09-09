@@ -2,7 +2,7 @@ import React from 'react'
 import {Box} from  '@mui/material';
 const Feed = () => {
   return (
-    <Box bgcolor='grey' >Feed</Box>
+    <Box bgcolor='yellow ' p={2}  flex={4} >Feed</Box>
   )
 }
 
