@@ -1,0 +1,58 @@
+import React from 'react'
+import {AppBar,styled, InputBase,Toolbar,Badge,Avatar, Typography} from  '@mui/material';
+import { Pets,Mail,Notifications } from '@mui/icons-material';
+
+const navbar = () => {
+ const StyledToolbar = styled(Toolbar)({
+display:"flex",
+justifyContent:"Space-between"
+
+ });
+ const Search = styled("div")(({theme}) =>({
+backgroundColor:'white',
+padding:'0 10px',
+borderRadius: theme.shape.borderRadius,
+width:'40%'
+ }));
+ const Icons = styled('box')(({theme})=>({
+    display:'flex',
+    gap:'20px',
+    alignItems:"center"
+ }));
+ const UserBox = styled('Box')(({theme}) =>({
+[theme.breakpoints.up("sm")] :{display:'block'}
+
+
+ }))
+ 
+    return (
+   
+<AppBar position='sticky '>
+    <StyledToolbar>
+        <Typography sx={{display:{xs:'none',sm:'block'}}} variant="h6"> REACTJS MUI</Typography>
+<Pets   sx={{display:{xs:'block',sm:'none'}}}/>
+   <Search><InputBase placeholder='Search...' /></Search>
+   <Icons>
+<Badge  color='error' badgeContent={4}  >
+<Mail  />
+
+</Badge>
+<Badge badgeContent={2} color="error" >
+    <Notifications  />
+
+</Badge> 
+<Avatar sx={{height:30,width:30}} src = "" />
+   </Icons>
+   <UserBox>
+       <Avatar sx={{height:30,width:30}} src = "" />
+<Typography variant="primary" > jowaini </Typography>
+   </UserBox>
+
+    </StyledToolbar>
+</AppBar>
+
+
+  )
+}
+
+export default navbar
