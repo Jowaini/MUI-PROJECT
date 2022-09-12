@@ -56,7 +56,7 @@ const Rightbar = () => {
   Conversations
 </Typography>
 
-<List  sx={{ width: '100%', maxWidth: 360, bgcolor: 'background.paper' }}>
+<List  sx={{  width: '100%', maxWidth: 360, bgcolor: 'background.paper' }}>
       <ListItem alignItems="flex-start">
         <ListItemAvatar>
           <Avatar alt="Remy Sharp" src="https://mui.com//static/images/avatar/1.jpg" />
@@ -123,7 +123,7 @@ const Rightbar = () => {
         />
       </ListItem>
     </List>
-
+    
 </Box>
 
     </Box>
